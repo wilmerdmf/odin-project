@@ -1,2 +1,2 @@
-# odion-project
+# odin-project
 odin-project exercises
