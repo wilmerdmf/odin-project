@@ -1,0 +1,93 @@
+/*$ ************* Custom Properties - Variables  ************* */
+
+:root {
+  --first-color: #151517;
+  --second-color: #a78347;
+  --text-color: #151517;
+  --second-text-color: #dba64b;
+  --link-color: #a78347;
+  --max-width: 1200px;
+}
+
+/*$ ************* Reset ************* */
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #e9ebed;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+hr {
+  width: 90%;
+}
+
+/*$ ************* Preset - Estilos predefinidos  ************* */
+
+.max-width-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: inherit;
+}
+
+/*$ ************* Site Styles - Estilos de un sitio específico ************* */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title,
+.main-description {
+  padding: 1.5vh;
+  text-align: center;
+  color: var(--text-color);
+  font-size: calc(20px + ((26 - 20) * ((100vw - 320px) / (1200 - 320))));
+  font-weight: bold;
+}
+
+.main-description {
+  font-size: calc(10px + ((16 - 10) * ((100vw - 320px) / (1200 - 320))));
+}
+
+.list-title {
+  padding: 1.5vh;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  color: var(--text-color);
+  font-size: calc(22px + ((26 - 22) * ((100vw - 320px) / (1200 - 320))));
+}
+
+.list-object {
+  list-style: none;
+  font-weight: bold;
+}
+
+.list-object li {
+  padding: 2.5vh;
+  border-bottom: var(--link-color) 1px solid;
+}
+
+.list-object li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: calc(12px + ((14 - 12) * ((100vw - 320px) / (1200 - 320))));
+}
+
+.list-object li a:hover {
+  color: var(--second-text-color);
+}
