@@ -1,0 +1,189 @@
+/*$ ************* Custom Properties - Variables  ************* */
+
+:root {
+  --first-color: #17171a;
+  --second-color: #333;
+  --third-color: #666;
+  --white-color: #fff;
+  --hover-color: #555;
+  --active-color: #444;
+  --click-color: #777;
+  --green-color: #18914a;
+}
+
+/*$ ************* Reset ************* */
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*$ ************* Preset - Estilos predefinidos  ************* */
+
+button {
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--second-color);
+  color: var(--white-color);
+  transition: background-color 0.3s;
+  border: 1px solid var(--third-color);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button.is-active {
+  background-color: var(--active-color);
+  pointer-events: none;
+}
+
+button:active {
+  background-color: var(--click-color);
+}
+
+/*$ ************* Site Styles - Estilos de un sitio específico ************* */
+
+.body-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--first-color);
+  user-select: none;
+}
+
+.calculator {
+  display: grid;
+  grid-template-areas:
+    "input input input"
+    "boton boton boton";
+  max-width: 350px;
+  background-color: var(--third-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--first-color);
+  padding: 5px;
+  margin: 15px;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 15px 25px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  border: none;
+  background-color: var(--third-color);
+  color: var(--white-color);
+  cursor: auto;
+  grid-area: input;
+}
+
+.display:focus {
+  outline: none;
+}
+
+.display.is-done {
+  border: 5px solid var(--green-color);
+  border-radius: 10px;
+  font-size: 27px;
+  text-align: center;
+}
+
+.buttons {
+  grid-area: boton;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "del del ac dividir"
+    "siete ocho nueve multiplicar"
+    "cuatro cinco seis restar"
+    "uno dos tres sumar"
+    "cero coma resultado resultado";
+}
+
+button[id="AC"] {
+  grid-area: ac;
+}
+
+button[id="DEL"] {
+  grid-area: del;
+}
+
+button[id="/"] {
+  grid-area: dividir;
+}
+
+button[id="*"] {
+  grid-area: multiplicar;
+}
+
+button[id="+"] {
+  grid-area: sumar;
+}
+
+button[id="-"] {
+  grid-area: restar;
+}
+
+button[id=","] {
+  grid-area: coma;
+}
+
+button[id="="] {
+  grid-area: resultado;
+}
+
+button[id="1"] {
+  grid-area: uno;
+}
+
+button[id="2"] {
+  grid-area: dos;
+}
+
+button[id="3"] {
+  grid-area: tres;
+}
+
+button[id="4"] {
+  grid-area: cuatro;
+}
+
+button[id="5"] {
+  grid-area: cinco;
+}
+
+button[id="6"] {
+  grid-area: seis;
+}
+
+button[id="7"] {
+  grid-area: siete;
+}
+
+button[id="8"] {
+  grid-area: ocho;
+}
+
+button[id="9"] {
+  grid-area: nueve;
+}
+
+button[id="0"] {
+  grid-area: cero;
+}
