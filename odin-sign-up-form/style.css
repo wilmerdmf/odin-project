@@ -1,0 +1,225 @@
+/*$ ************* Custom Properties - Variables  ************* */
+
+:root {
+  --first-color: #000;
+  --text-color: #0f0f0f;
+  --black-color: #000;
+  --black-alpha-color: #00000070;
+  --white-color: #fafafa;
+  --first-background-color: #dedede;
+  --font: Norse-Bold, sans-serif;
+}
+
+/*$ ************* Reset ************* */
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid blue;
+  box-shadow: 0 0 1px blue;
+}
+
+input.invalid {
+  border: 2px solid red;
+  box-shadow: 0 0 1px red;
+}
+
+input.valid {
+  border: 2px solid green;
+  box-shadow: 0 0 1px green;
+}
+
+/*$ ************* Preset - Estilos predefinidos  ************* */
+
+@font-face {
+  font-family: Norse-Bold;
+  src: url("./assets/fonts/Norse-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*$ ************* Site Styles - Estilos de un sitio específico ************* */
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1024px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-shadow: 0 0 10px var(--black-color);
+}
+
+.image-container {
+  background-image: url(./assets/images/main-image.jpg);
+  background-size: cover;
+}
+
+.logo-container {
+  background-color: var(--black-alpha-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  margin-top: 45%;
+}
+
+.logo-container img {
+  width: 60px;
+}
+
+.logo-container h1 {
+  color: var(--white-color);
+  font-family: var(--font);
+  font-size: 4rem;
+}
+
+.content-container {
+  grid-column: span 2;
+  background-color: var(--first-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-container > div {
+  width: 100%;
+  height: 33%;
+}
+
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-text-container p,
+.form-container h2 {
+  width: 80%;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  margin: 15px 25px;
+  color: var(--text-color);
+}
+
+.form-container {
+  background-color: var(--white-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.286);
+}
+
+.form-container form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "name name lname lname"
+    "mail mail pnumber pnumber"
+    "password password rpassword rpassword";
+}
+
+.form-container form div {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: 10px 25px;
+}
+
+.form-container form div label {
+  font-size: 0.7rem;
+  font-size: bolder;
+  margin-bottom: 2px;
+}
+
+.form-container form div input {
+  padding: 4px;
+}
+
+div[class="name"] {
+  grid-area: name;
+}
+
+div[class="last-name"] {
+  grid-area: lname;
+}
+
+div[class="email"] {
+  grid-area: mail;
+}
+
+div[class="phone"] {
+  grid-area: pnumber;
+}
+
+div[class="password"] {
+  grid-area: password;
+}
+
+div[class="confirm-password"] {
+  grid-area: rpassword;
+}
+
+.button-container input {
+  padding: 10px;
+  margin: 25px;
+  width: 170px;
+  border-radius: 10px;
+  background-color: #596d48;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.286);
+}
+
+.button-container input:active {
+  background-color: #677f51;
+}
+
+.button-container input:focus {
+  border: none;
+  outline: none;
+}
+
+.button-container p {
+  margin: 0 25px;
+}
+
+.button-container p a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bolder;
+}
