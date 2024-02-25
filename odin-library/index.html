@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container max-width-container">
+
+        <header class="header-element">
+
+            <h1>Welcome to your virtual library!</h1>
+
+        </header>
+
+        <main class="main-element">
+
+            <div class="add-button-container">
+
+                <img class="add-button" src="./assets/icons/plus-circle.svg" alt="Add Book Icon">
+
+            </div>
+
+            <div class="cards-container">
+
+                <article class="card">
+
+                    <img src="./assets/icons/book-icon.svg" alt="Book Icon">
+
+                    <img class="delete-button" src="./assets/icons/window-close.svg" alt="Delete Card Icon">
+
+                    <h3 class="book-name">Harry Potter and the Philosopher's Stone</h3>
+
+                    <p class="author-name">J. K. Rowling</p>
+
+                    <p class="book-pages">223 Pages</p>
+
+                    <select class="select-element" name="select">
+
+                        <option value="value1" selected>Status</option>
+
+                        <option value="value2">Reading</option>
+
+                        <option value="value3">Completed</option>
+
+                        <option value="value4">Not started</option>
+
+                    </select>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="./assets/icons/book-icon.svg" alt="Book Icon">
+
+                    <img class="delete-button" src="./assets/icons/window-close.svg" alt="Delete Card Icon">
+
+                    <h3 class="book-name">A Song of Ice and Fire</h3>
+
+                    <p class="author-name">George R. R. Martin</p>
+
+                    <p class="book-pages">832 Pages</p>
+
+                    <select class="select-element" name="select">
+
+                        <option value="value1" selected>Status</option>
+
+                        <option value="value2">Reading</option>
+
+                        <option value="value3">Completed</option>
+
+                        <option value="value4">Not started</option>
+
+                    </select>
+
+                </article>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="form-container">
+
+        <form>
+
+            <img class="close-form" src="./assets/icons/window-close-form.svg" alt="Delete Card Icon">
+
+            <input id="name-input" type="text" placeholder="Book Name" required autocomplete="off">
+
+            <input id="author-input" type="text" placeholder="Author" required autocomplete="off">
+
+            <input id="pages-input" type="number" placeholder="Pages" required autocomplete="off">
+
+            <input class="add-submit" type="submit" value="Add Book">
+
+        </form>
+
+    </div>
+
+    <template>
+
+        <article class="card">
+
+            <img src="./assets/icons/book-icon.svg" alt="Book Icon">
+
+            <img class="delete-button" src="./assets/icons/window-close.svg" alt="Delete Card Icon">
+
+            <h3 class="book-name"></h3>
+
+            <p class="author-name"></p>
+
+            <p class="book-pages"></p>
+
+            <select class="select-element" name="select">
+
+                <option value="value1" selected>Status</option>
+
+                <option value="value2">Reading</option>
+
+                <option value="value3">Completed</option>
+
+                <option value="value4">Not started</option>
+
+            </select>
+
+        </article>
+
+    </template>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

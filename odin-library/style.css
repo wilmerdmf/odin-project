@@ -1,0 +1,214 @@
+/*$ ************* Custom Properties - Variables  ************* */
+
+:root {
+  --first-color: #182c61;
+  --second-color: #dcdef5;
+  --third-color: #f2f2fa;
+  --text-color: #dcdef5;
+  --shadow-color: #00000075;
+  --second-text-color: #182c61;
+  --max-width: 1100px;
+}
+
+/*$ ************* Reset ************* */
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: var(--first-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+}
+
+body {
+  user-select: none;
+}
+
+/*$ ************* Preset - Estilos predefinidos  ************* */
+
+.max-width-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: inherit;
+}
+
+/*$ ************* Site Styles - Estilos de un sitio específico ************* */
+
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--second-color);
+}
+
+.main-container.is-active {
+  pointer-events: none;
+}
+
+.add-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  width: 50px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.add-button:active {
+  transform: scale(0.95);
+}
+
+/*? ************* Header  ************* */
+
+.header-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--first-color);
+  box-shadow: 0px 5px 5px -5px #000000;
+}
+
+.header-element h1 {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/*? ************* Main ************* */
+
+.main-element {
+  padding: 10px;
+}
+
+/*! ************* Cards ************* */
+
+.cards-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10px;
+  width: 300px;
+  height: 250px;
+  border: 2px solid var(--first-color);
+  border-radius: 20px;
+  background-color: var(--third-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.delete-button {
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  position: absolute;
+}
+
+.card img {
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+.book-name {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.author-name,
+.book-pages,
+.checkbox-label {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.select-element {
+  text-align: center;
+  width: 40%;
+  padding: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*! ************* Form ************* */
+
+.form-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  top: 60%;
+  right: 0;
+  left: 0;
+  background-color: #000000ef;
+  z-index: 9999;
+}
+
+.form-container.is-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container form > * {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.close-form {
+  width: 50px;
+  cursor: pointer;
+}
