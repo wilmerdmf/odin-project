@@ -76,6 +76,7 @@ body {
   list-style: none;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .list-object li {

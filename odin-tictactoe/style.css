@@ -1,0 +1,55 @@
+/*$ ************* Reset ************* */
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Deshabilitar la selección de texto */
+  user-select: none;
+}
+
+/*$ ************* Site Styles - Estilos de un sitio específico ************* */
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px auto;
+  width: 300px;
+}
+
+.game-cell {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 1px #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 3.75rem;
+}
+
+.game-restart {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.game-notification {
+  margin: 40px 0;
+}
