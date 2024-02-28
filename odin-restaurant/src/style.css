@@ -1,0 +1,183 @@
+/*$ ************* Custom Properties - Variables  ************* */
+
+:root {
+  --first-color: #000;
+  --text-color: #e5e5e5;
+  --alpha-black-color: #000000ab;
+  --section-background-color: #000000a3;
+  --max-width: 1200px;
+}
+
+/*$ ************* Reset ************* */
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+}
+
+/*$ ************* Preset - Estilos predefinidos  ************* */
+
+.max-width-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: inherit;
+}
+
+/*$ ************* Site Styles - Estilos de un sitio específico ************* */
+
+/*? ************* Header ************* */
+
+.content-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/background-image.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+.header-element {
+  position: fixed;
+  width: 100%;
+  background-color: var(--alpha-black-color);
+  height: 60px;
+}
+
+.nav-bar-container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  font-size: calc(12px + ((16 - 12) * ((100vw - 320px) / (1200 - 320))));
+  font-weight: bolder;
+  color: var(--text-color);
+  margin: 0 15px;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+.nav-item:hover {
+  text-shadow: 0 0 4px var(--text-color);
+}
+
+.nav-item:active {
+  transform: scale(0.95);
+}
+
+/*? ************* Content ************* */
+
+.home-container,
+.menu-container,
+.about-container {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--section-background-color);
+}
+
+/*! ************* Home Section ************* */
+
+.home-text-container {
+  width: 55%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--alpha-black-color);
+  border-radius: 20px;
+  padding: 15px;
+  border-left: 5px solid var(--text-color);
+  border-right: 5px solid var(--text-color);
+}
+
+.home-text-container p {
+  color: var(--text-color);
+  font-size: calc(18px + ((23 - 18) * ((100vw - 320px) / (1200 - 320))));
+  max-width: 500px;
+}
+
+/*! ************* Menu Section ************* */
+
+.menu-text-container {
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  background-color: var(--alpha-black-color);
+  border-radius: 20px;
+  padding: 15px;
+  border-left: 5px solid var(--text-color);
+  border-right: 5px solid var(--text-color);
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+  text-align: start;
+}
+
+.menu-list > li {
+  font-size: calc(12px + ((16 - 12) * ((100vw - 320px) / (1200 - 320))));
+  margin: 10px 0;
+}
+
+/*! ************* About Section ************* */
+
+.about-text-container {
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  background-color: var(--alpha-black-color);
+  border-radius: 20px;
+  padding: 15px;
+  border-left: 5px solid var(--text-color);
+  border-right: 5px solid var(--text-color);
+}
+
+.about-text-container h2 {
+  font-size: calc(20px + ((25 - 20) * ((100vw - 320px) / (1200 - 320))));
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+
+.about-text-container p {
+  font-size: calc(12px + ((16 - 12) * ((100vw - 320px) / (1200 - 320))));
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
